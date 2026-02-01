@@ -1,0 +1,58 @@
+.detalle-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.detalle-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.detalle-card img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: contain;
+}
+
+.detalle-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.detalle-description {
+    margin: 15px 0;
+    color: #555;
+}
+
+.detalle-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btn-volver {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #c77dff;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-volver:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 800px) {
+    .detalle-card {
+        grid-template-columns: 1fr;
+    }
+}
