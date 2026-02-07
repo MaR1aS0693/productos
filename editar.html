@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="editar.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Dummy JSON - Editar</div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>Editar Producto</h1>
+
+        <div class="form-group">
+            <label>Nombre del Producto:</label>
+            <input type="text" id="titulo" placeholder="Ej. iPhone 15">
+        </div>
+        
+        <div class="form-group">
+            <label>Precio ($):</label>
+            <input type="number" id="precio" placeholder="0.00">
+        </div>
+
+        <div class="form-group">
+            <label>Categoría:</label>
+            <select id="categoria">
+                <option value="smartphones">Smartphones</option>
+                <option value="laptops">Laptops</option>
+                <option value="fragrances">Fragancias</option>
+                <option value="skincare">Cuidado de piel</option>
+                <option value="groceries">Comestibles</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Descripción:</label>
+            <textarea id="descripcion" rows="4" placeholder="Detalles del producto..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>URL imagen (opcional):</label>
+            <input type="text" id="imagen" placeholder="https://...">
+        </div>
+
+        <button class="btn-back" onclick="window.history.back()">⬅ Volver</button>
+        <button onclick="window.location.href='vista-detalle.html?id=' + new URLSearchParams(window.location.search).get('id')">Guardar Cambios</button>
+
+        <div id="mensaje-exito"></div>
+        <script src="editar.js"></script>
+    </main>
+    
+</body>
+</html>

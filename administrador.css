@@ -1,0 +1,143 @@
+/*BARRA SUPERIOR*/
+.topbar {
+    background: #ffffff;
+    padding: 20px 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.topbar h1 {
+    margin: 0;
+    color: #333;
+}
+
+.top-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Buscador */
+#busqueda {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+#busqueda:focus {
+    border-color: #c77dff;
+    box-shadow: 0 0 0 2px rgba(199,125,255,0.2);
+    outline: none;
+}
+
+/* FILTROS */
+.filtros {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+/* TABLA CONTENEDOR  */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 30px 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+
+th {
+    background: #f8f9ff;
+    color: #444;
+    font-weight: bold;
+    padding: 14px;
+    font-size: 14px;
+}
+
+
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+tr:hover {
+    background: #f9f7ff;
+}
+
+
+td img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+
+td button {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 12px;
+    margin: 2px;
+}
+
+
+.paginacion {
+    text-align: center;
+    margin: 25px 0 40px 0;
+}
+
+.paginacion button {
+    background: #c77dff;
+    color: white;
+}
+
+.paginacion button:hover {
+    opacity: 0.85;
+}
+
+#info-pagina {
+    margin: 0 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+
+@media (max-width: 768px) {
+    .topbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .filtros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    td img {
+        width: 45px;
+        height: 45px;
+    }
+}

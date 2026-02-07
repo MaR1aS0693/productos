@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo producto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="agregar.css">
+</head>
+<body>
+
+    <h1>Nuevos productos</h1>
+
+    <div class="form-group">
+        <label>Nombre del producto:</label>
+        <input type="text" id="titulo" placeholder="Nombre del producto...">
+    </div>
+
+    <div class="form-group">
+        <label>Precio ($):</label>
+        <input type="number" id="precio" placeholder="$0.00">
+    </div>
+
+    <div class="form-group">
+        <label>Categoría:</label>
+        <select id="categoria">
+            <option value="smartphones">SmartPhones</option>
+            <option value="laptops">Laptops</option>
+            <option value="fragrances">Fragances</option>
+            <option value="skincare">Skin Care</option>
+            <option value="groceries">Groceries</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Descripción:</label>
+        <textarea id="descripcion" rows="4" placeholder="Descripción del producto..."></textarea>
+    </div>
+
+    <button class="btn-back" onclick="window.location.href='../index.html'">
+        ← Volver
+    </button>
+
+    <button onclick="crearProducto()">
+        Guardar Producto
+    </button>
+
+    <div id="mensaje-exito" style="display:none; margin-top:15px;"></div>
+
+    <script src="agregar.js"></script>
+</body>
+</html>

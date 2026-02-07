@@ -22,8 +22,8 @@ if (!productId) {
             <p class="detalle-category">${product.category}</p>
             <p class="opiniones-count">Opiniones: ${product.stock}</p>
 
-            <button class="btn-volver" onclick="history.back()">
-              ← Volver al catálogo
+            <button class="btn-volver" onclick="window.location.href='index.html'">
+            ⬅ Volver al catálogo
             </button>
           </div>
         </div>

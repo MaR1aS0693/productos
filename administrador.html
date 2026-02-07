@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ShopMaster Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="administrador.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>ShopMaster Admin</h1>
+    <div class="top-actions">
+        <input type="text" id="busqueda" placeholder="Buscar producto...">
+        <button onclick="buscar()">Buscar</button>
+        <button onclick="window.location.href='agregar.html'">+ Nuevo Producto</button>
+    </div>
+</header>
+
+<section class="filtros">
+    <select id="filtro-categoria" onchange="filtrarCategoria()">
+        <option value="">Todas las categorías</option>
+    </select>
+
+    <select id="ordenar" onchange="ordenarProductos()">
+        <option value="">Ordenar por</option>
+        <option value="title-asc">Título A-Z</option>
+        <option value="title-desc">Título Z-A</option>
+        <option value="price-asc">Precio menor a mayor</option>
+        <option value="price-desc">Precio mayor a menor</option>
+    </select>
+</section>
+
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Foto</th>
+                <th>Título</th>
+                <th>Precio</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-productos"></tbody>
+    </table>
+</main>
+
+<footer class="paginacion">
+    <button onclick="anterior()">⟵ Anterior</button>
+    <span id="info-pagina">Página 1</span>
+    <button onclick="siguiente()">Siguiente ⟶</button>
+</footer>
+
+<script src="administrador.js"></script>
+</body>
+</html>
